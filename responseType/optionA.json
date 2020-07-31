@@ -1,0 +1,43 @@
+{
+    "timestamp": 1596077437543,
+    "data": {
+        "success": {
+            "vaJob": [
+                {
+                    "jobId": "63d7c99d-2ce6-4aea-9633-c25ddb6cc1d4",
+                    "jobName": "test2"
+                }
+            ]
+        },
+        "failedCannotFind": {
+            "errorType": "Record doesn't exist",
+            "errorMessage": "Job doesn't exist. Please refresh your page",
+            "vaJob": [
+                {
+                    "errorId": "1c672d31-455c-447a-963e-bb121ebb88f5",
+                    "errorSource": null,
+                    "jobId": "ac672d31-455c-447a-963e-bb121ebb88f5",
+                    "jobName": null
+                },
+                {
+                    "errorId": "1c672d31-455c-447a-963e-bb121ebb88f5",
+                    "errorSource": null,
+                    "jobId": "c985699e-13f4-440a-974c-924edbd240b4",
+                    "jobName": null
+                }
+            ]
+        },
+        "failedVaServerUncontactable": {
+            "errorType": "Service Uncontactable",
+            "errorMessage": "Please contact admin. System unable to contact VA server.",
+            "vaJob": [
+                {
+                    "errorId": "1c672d31-455c-447a-963e-bb121ebb88f5",
+                    "errorSource": null,
+                    "jobId": "ac672d31-455c-447a-963e-bb121ebb88f5",
+                    "jobName": null
+                }
+            ]
+        }
+    }
+}
