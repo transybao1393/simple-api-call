@@ -1,6 +1,12 @@
+import optionA from '../../responseType/optionA.json';
+
 export default class MethodFactory {
     constructor() {
         this.baseUrl = 'https://jsonplaceholder.typicode.com/posts';
+    }
+
+    viewOptionAData() {
+        return optionA;
     }
 
     async generalRequest(requestType, data = {}) {

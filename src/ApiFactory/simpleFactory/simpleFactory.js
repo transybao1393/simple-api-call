@@ -8,6 +8,7 @@ export default class SimpleFactory extends MethodFactory {
     //- get some sample data form jsonplaceholder
     getDataFromApi() {
         console.log('base url', this.baseUrl);
+        console.log('option A data', super.viewOptionAData());
         return super.generalRequest("GET")
         .then(rs => console.log(rs));
     }
