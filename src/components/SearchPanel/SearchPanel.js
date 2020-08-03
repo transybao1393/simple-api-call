@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import DropdownButton from '../DropdownButton/DropdownButton';
 
-
 class SearchPanel extends Component {
 
     constructor(props) {
@@ -11,14 +10,13 @@ class SearchPanel extends Component {
             statusList: ['Complete', 'Running', 'Error'],
             typeList: ['Face', 'Vehicle'],
             vendorList: ['ST VA', 'Govtech'],
-            sourceList: ['']
+            sourceList: ['Source']
         }
     }
     
-    
     render() {
         return (
-            <div>
+            <div className="SearchPanel">
                 <DropdownButton
                     dropdownList={this.state.statusList}
                 />
