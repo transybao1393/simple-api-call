@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import SimpleFactory from '../../ApiFactory/SimpleFactory/SimpleFactory';
+import optionA from '../../responseType/optionA';
 
 class ApiFetch extends Component {
+
+    componentDidMount() {
+        console.log('option A', optionA);
+    }
+
     render() {
-        console.info('simple factory...', new SimpleFactory().getDataFromApi());
+        
         return (
             <div>
                 <p>This is api fetch sample</p>

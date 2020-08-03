@@ -1,13 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import ApiFetch from './components/ApiFetch/ApiFetch';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
+import JobManagement from './pages/JobManagement/JobManagement';
 
 function App() {
   return (
-    <div className="App">
-      <ApiFetch/>
-    </div>
+    <JobManagement/>
   );
 }
 

@@ -9,7 +9,7 @@ export default class MethodFactory {
         return optionA;
     }
 
-    async generalRequest(requestType, data = {}) {
+    async generalRequest(baseUrl, requestType, data = {}) {
         const options = {
             method: requestType, // *GET, POST, PUT, DELETE, etc.
             mode: 'cors', // no-cors, *cors, same-origin
@@ -28,8 +28,9 @@ export default class MethodFactory {
                 body: JSON.stringify(data)
             }) 
         }
-        const response = await fetch(this.baseUrl, options);
-        return response.json();
+        const response = await fetch(baseUrl, options);
+        // return response.json();
+        return response;
     }
 
 }
