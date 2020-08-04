@@ -21,15 +21,10 @@ export default class SearchPanel extends Component {
         });
     }
 
-    handleMenuClick(e) {
-        console.info('Click on menu item.');
-        console.log('click', e);
-    }
-
     render() {
 
         const menu = (
-            <Menu onClick={this.handleMenuClick()}>
+            <Menu>
                 {this._renderDropdownMenu()}
             </Menu>
         );

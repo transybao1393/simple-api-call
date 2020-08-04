@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import DropdownButton from '../DropdownButton/DropdownButton';
+import SimpleInput from '../../components/SimpleInput/SimpleInput';
+import {Row, Col, Button} from 'antd';
 
 class SearchPanel extends Component {
 
@@ -17,18 +19,28 @@ class SearchPanel extends Component {
     render() {
         return (
             <div className="SearchPanel">
-                <DropdownButton
-                    dropdownList={this.state.statusList}
-                />
-                <DropdownButton
-                    dropdownList={this.state.typeList}
-                />
-                <DropdownButton
-                    dropdownList={this.state.vendorList}
-                />
-                <DropdownButton
-                    dropdownList={this.state.sourceList}
-                />
+                <Row>
+                    <Col span={10}>
+                        <DropdownButton
+                            dropdownList={this.state.statusList}
+                        />
+                        <DropdownButton
+                            dropdownList={this.state.typeList}
+                        />
+                        <DropdownButton
+                            dropdownList={this.state.vendorList}
+                        />
+                        <DropdownButton
+                            dropdownList={this.state.sourceList}
+                        />
+                    </Col>
+                    <Col span={12}>
+                        <SimpleInput 
+                            placeholderValue={"Job search"}    
+                        />
+                        <Button>Clear</Button>
+                    </Col>
+                </Row>
             </div>
         );
     }
