@@ -9,6 +9,10 @@ class JobList extends Component {
         console.log('params', pagination, filters, sorter, extra);
     }
 
+    renderSubTable(columns, data) {
+        return <Table columns={columns} dataSource={data} pagination={false} showHeader={false}/>;
+    }
+
     render() {
 
         const columns = [
@@ -93,6 +97,79 @@ class JobList extends Component {
                 more: 'Info'
             }
         ];
+
+        const subColumn = [
+            {
+                // title: 'No.',
+                dataIndex: 'no'
+            },
+            {
+                // title: 'No.',
+                dataIndex: 'no'
+            },
+            {
+                // title: 'Name',
+                dataIndex: 'name'
+            },
+            {
+                // title: 'Description',
+                dataIndex: 'description'
+            },
+            {
+                // title: 'Status',
+                dataIndex: 'status'
+            },
+            {
+                // title: 'Type',
+                dataIndex: 'type'
+            },
+            {
+                // title: 'Source',
+                dataIndex: 'source'
+            },
+            {
+                // title: 'Vendor',
+                dataIndex: 'vendor'
+            },
+            {
+                // title: 'More',
+                dataIndex: 'more',
+                render: text => <a href="http://google.com">{text}</a>,
+            },
+        ];
+
+        const subData = [
+            {
+                key: '1',
+                name: 'Lab-3-test',
+                description: 'null',
+                status: 'Creating (0%)',
+                type: 'FACE',
+                source: 'GEOZONE',
+                vendor: 'ST VA',
+                more: 'Info'
+            },
+            {
+                key: '2',
+                name: 'Job_2',
+                description: 'null',
+                status: 'Creating (0%)',
+                type: 'FACE',
+                source: 'GEOZONE',
+                vendor: 'ST VA',
+                more: 'Info'
+            },
+            {
+                key: '3',
+                name: 'Job 1',
+                description: 'Job 1 description',
+                status: 'Creating (0%)',
+                type: 'FACE',
+                source: 'GEOZONE',
+                vendor: 'ST VA',
+                more: 'Info'
+            }
+        ];
         
         return (
             <Table
@@ -100,7 +177,8 @@ class JobList extends Component {
                 dataSource={data} 
                 onChange={this.onChange()} 
                 expandable={{
-                    expandedRowRender: record => <p style={{ margin: 0 }}>{record.description}</p>,
+                    // expandedRowRender: record => <p style={{ margin: 0 }}>{record.description}</p>,
+                    expandedRowRender: record => this.renderSubTable(subColumn, subData),
                     rowExpandable: record => record.name !== 'Not Expandable',
                 }}
                 rowSelection={{
