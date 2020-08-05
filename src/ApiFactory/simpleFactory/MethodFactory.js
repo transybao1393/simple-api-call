@@ -23,6 +23,19 @@ export default class MethodFactory {
             referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
             // body: JSON.stringify(data) // body data type must match "Content-Type" header
         };
+
+        // const BASE_URL = process.env.API_BASE_URL;
+        // const COOKIE_NAME = process.env.COOKIE_KEY_NAME;
+        // const options2 = {
+        //     baseURL: BASE_URL + url,
+        //     headers: {
+        //         'Access-Control-Allow-Origin': '*',
+        //         'Content-Type': 'application/json',
+        //     },
+        //     withCredentials: true,
+        //     timeout: 10000,
+        // };
+
         if (requestType !== "GET") {
             Object.assign(options, {
                 body: JSON.stringify(data)

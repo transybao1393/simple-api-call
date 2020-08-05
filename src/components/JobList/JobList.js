@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {Table} from 'antd';
+import JobManagementContext from '../../contexts/JobManagementContext';
 
 class JobList extends Component {
+    static contextType = JobManagementContext;
     onChange(pagination, filters, sorter, extra) {
         console.log('params', pagination, filters, sorter, extra);
     }
 
     render() {
+        console.log('context 333333...', this.context);
         const columns = [
             {
                 title: 'Name',
