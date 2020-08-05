@@ -1,79 +1,112 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {Table} from 'antd';
-import JobManagementContext from '../../contexts/JobManagementContext';
 
 class JobList extends Component {
-    static contextType = JobManagementContext;
+    
+    // static contextType = JobManagementContext;
     onChange(pagination, filters, sorter, extra) {
         console.log('params', pagination, filters, sorter, extra);
     }
 
     render() {
-        console.log('context 333333...', this.context);
+
         const columns = [
             {
+                title: 'No.',
+                dataIndex: 'no'
+            },
+            {
                 title: 'Name',
-                dataIndex: 'name',
+                dataIndex: 'name'
             },
             {
-                title: 'Chinese Score',
-                dataIndex: 'chinese',
-                sorter: {
-                compare: (a, b) => a.chinese - b.chinese,
-                multiple: 3,
-                },
+                title: 'Description',
+                dataIndex: 'description'
             },
             {
-                title: 'Math Score',
-                dataIndex: 'math',
-                sorter: {
-                compare: (a, b) => a.math - b.math,
-                multiple: 2,
-                },
+                title: 'Status',
+                dataIndex: 'status'
             },
             {
-                title: 'English Score',
-                dataIndex: 'english',
-                sorter: {
-                compare: (a, b) => a.english - b.english,
-                multiple: 1,
-                },
+                title: 'Type',
+                dataIndex: 'type'
+            },
+            {
+                title: 'Source',
+                dataIndex: 'source'
+            },
+            {
+                title: 'Vendor',
+                dataIndex: 'vendor'
+            },
+            {
+                title: 'More',
+                dataIndex: 'more',
+                render: text => <a href="http://google.com">{text}</a>,
             },
         ];
-        
+
         const data = [
             {
                 key: '1',
-                name: 'John Brown',
-                chinese: 98,
-                math: 60,
-                english: 70,
+                no: '1',
+                name: 'Lab-3-test',
+                description: 'null',
+                status: 'Creating (0%)',
+                type: 'FACE',
+                source: 'GEOZONE',
+                vendor: 'ST VA',
+                more: 'Info'
             },
             {
                 key: '2',
-                name: 'Jim Green',
-                chinese: 98,
-                math: 66,
-                english: 89,
+                no: '2',
+                name: 'Job_2',
+                description: 'null',
+                status: 'Creating (0%)',
+                type: 'FACE',
+                source: 'GEOZONE',
+                vendor: 'ST VA',
+                more: 'Info'
             },
             {
                 key: '3',
-                name: 'Joe Black',
-                chinese: 98,
-                math: 90,
-                english: 70,
+                no: '3',
+                name: 'Job 1',
+                description: 'Job 1 description',
+                status: 'Creating (0%)',
+                type: 'FACE',
+                source: 'GEOZONE',
+                vendor: 'ST VA',
+                more: 'Info'
             },
             {
                 key: '4',
-                name: 'Jim Red',
-                chinese: 88,
-                math: 99,
-                english: 89,
-            },
+                no: '4',
+                name: 'Not Expandable',
+                description: 'Job 1 description',
+                status: 'Creating (0%)',
+                type: 'FACE',
+                source: 'GEOZONE',
+                vendor: 'ST VA',
+                more: 'Info'
+            }
         ];
+        
         return (
-            <Table columns={columns} dataSource={data} onChange={this.onChange()} />
+            <Table
+                columns={columns} 
+                dataSource={data} 
+                onChange={this.onChange()} 
+                expandable={{
+                    expandedRowRender: record => <p style={{ margin: 0 }}>{record.description}</p>,
+                    rowExpandable: record => record.name !== 'Not Expandable',
+                }}
+                rowSelection={{
+                    type: 'checkbox'
+                }}
+            />
         );
     }
 }
