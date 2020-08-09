@@ -1,0 +1,15 @@
+{
+    "timestamp": 1596077437543,
+    "data": {
+        "success": {
+            "vaJob": [
+                {
+                    "jobId": "5b39b17c-099d-4d54-995e-64f4caffb64e",
+                    "jobName": "test2"
+                }
+            ]
+        },
+        "failedNotFound": {},
+        "failedServerUncontactable": {}
+    }
+}

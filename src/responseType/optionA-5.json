@@ -1,0 +1,32 @@
+{
+    "timestamp": 1596077437543,
+    "data": {
+        "failedNotFound": {
+            "errorType": "Record doesn't exist",
+            "errorMessage": "Job doesn't exist. Please refresh your page",
+            "vaJob": [
+                {
+                    "errorId": "5b39b17c-099d-4d54-995e-64f4caffb64r",
+                    "errorSource": null,
+                    "jobId": "5b39b17c-099d-4d54-995e-64f4caffb64e",
+                    "jobName": null
+                },
+                {
+                    "errorId": "5b39b17c-099d-4d54-995e-64f4caffb64r",
+                    "errorSource": null,
+                    "jobId": "5b39b17c-099d-4d54-995e-64f4caffb64e",
+                    "jobName": null
+                }
+            ]
+        },
+        "success": {
+            "vaJob": [
+                {
+                    "jobId": "5b39b17c-099d-4d54-995e-64f4caffb64h",
+                    "jobName": "test2"
+                }
+            ]
+        },
+        "failedServerUncontactable": {}
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "errorId": null,
+    "timestamp": 1596787761.466000000,
+    "errorType": null,
+    "errorMessage": null,
+    "errorSource": null,
+    "data": {
+        "jobId": "06723b57-69c3-4c6a-9387-d1b6c1367f10",
+        "jobName": "Job_2",
+        "jobDescription": null,
+        "jobStatus": null,
+        "jobType": "FACE",
+        "sourceType": "GEOZONE",
+        "sourceGroupId": "a1a80e28-a195-4806-8bf8-92189ccfe23e",
+        "createdBy": "Samhitha1@govtech",
+        "createdDate": 1595904194.203000000,
+        "updatedBy": null,
+        "updatedDate": null,
+        "scheduleStartTime": null,
+        "scheduleEndTime": null,
+        "motionActivation": null,
+        "motionThreshold": null,
+        "bestN": null,
+        "bestNStrategy": null,
+        "detectionInterval": null,
+        "detectionThreshold": null,
+        "updateInterval": null,
+        "minDetectionHeight": null,
+        "maxDetectionHeight": null,
+        "minDetectionWidth": null,
+        "maxDetectionWidth": null,
+        "minTrack": null,
+        "maxTrack": null,
+        "maxFrameRate": null,
+        "tenantId": "219f877c-acf0-428a-b17e-5092ea166092",
+        "vaVendorId": "2d384a9d-d0bf-4872-9f3c-c2258a5912b0",
+        "vaVendorName": "st",
+        "jobDeployments": [
+            {
+                "jobDeploymentId": "203da049-5b6f-4fcb-a672-231289696c79",
+                "jobId": "06723b57-69c3-4c6a-9387-d1b6c1367f10",
+                "type": "FACE",
+                "sourceGroupIdRef": "a1a80e28-a195-4806-8bf8-92189ccfe23e",
+                "sourceIdRef": "989fa062-c57f-4032-84fb-8ca0bd1ecd50",
+                "vendorJobId": "5f1f90c3c04bb50001da801f",
+                "vendorSourceId": "5f1f90c2c04bb50001da801d",
+                "vendorDeploymentStatus": "CREATING"
+            },
+            {
+                "jobDeploymentId": "d0875c75-d9f5-4575-9075-b009413f82e7",
+                "jobId": "06723b57-69c3-4c6a-9387-d1b6c1367f10",
+                "type": "FACE",
+                "sourceGroupIdRef": "a1a80e28-a195-4806-8bf8-92189ccfe23e",
+                "sourceIdRef": "81497435-519c-42df-9989-39309f17518c",
+                "vendorJobId": "5f1f90c3c04bb50001da8023",
+                "vendorSourceId": "5f1f90c3c04bb50001da8021",
+                "vendorDeploymentStatus": "CREATING"
+            },
+            {
+                "jobDeploymentId": "ac46e119-a78d-4aec-9c8a-15cf5dec974f",
+                "jobId": "06723b57-69c3-4c6a-9387-d1b6c1367f10",
+                "type": "FACE",
+                "sourceGroupIdRef": "a1a80e28-a195-4806-8bf8-92189ccfe23e",
+                "sourceIdRef": "b46cfb72-22ed-42fa-bbaa-a0888ea736ef",
+                "vendorJobId": "5f1f90c3c04bb50001da8027",
+                "vendorSourceId": "5f1f90c3c04bb50001da8025",
+                "vendorDeploymentStatus": "CREATING"
+            }
+        ],
+        "deleted": false
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "errorId": "Sample error id",
+    "timestamp": 1596787761.466000000,
+    "errorType": "Sample error type",
+    "errorMessage": "Sample error message",
+    "errorSource": "Sample error source",
+    "data": null
+}

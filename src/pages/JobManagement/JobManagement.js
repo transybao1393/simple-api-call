@@ -13,7 +13,7 @@ const initialJobState = {
 
 export default class JobManagement extends Component {
 
-    render() {
+    render() { 
         return (
             <div className="jobMng">
                 <JobManagementContext.Provider value={initialJobState}>

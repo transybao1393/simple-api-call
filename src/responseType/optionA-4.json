@@ -1,0 +1,19 @@
+{
+    "timestamp": 1596077437543,
+    "data": {
+        "failedServerUncontactable": {
+            "errorType": "Service Uncontactable",
+            "errorMessage": "Please contact admin. System unable to contact VA server.",
+            "vaJob": [
+                {
+                    "errorId": "aasaasdasd",
+                    "errorSource": null,
+                    "jobId": "asdasdasdasd",
+                    "jobName": null
+                }
+            ]
+        },
+        "success": {},
+        "failedNotFound": {}
+    }
+}

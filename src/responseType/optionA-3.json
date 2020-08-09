@@ -1,0 +1,25 @@
+{
+    "timestamp": 1596077437543,
+    "data": {
+        "failedNotFound": {
+            "errorType": "Record doesn't exist",
+            "errorMessage": "Job doesn't exist. Please refresh your page",
+            "vaJob": [
+                {
+                    "errorId": "asdasdasd",
+                    "errorSource": null,
+                    "jobId": "asdasas",
+                    "jobName": null
+                },
+                {
+                    "errorId": "asdasd",
+                    "errorSource": null,
+                    "jobId": "asdasas",
+                    "jobName": null
+                }
+            ]
+        },
+        "success": {},
+        "failedServerUncontactable": {}
+    }
+}

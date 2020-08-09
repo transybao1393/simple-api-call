@@ -1,0 +1,31 @@
+{
+    "errorId": null,
+    "timestamp": 1593481088129,
+    "errorType": null,
+    "errorMessage": null,
+    "errorSource": null,
+    "data": {
+      "successful": [
+        {
+          "jobId": "63d7c99d-2ce6-4aea-9633-c25ddb6cc1d4",
+          "jobName": "test1"
+        }
+      ],
+      "failedDoesntExist": [
+        {
+          "jobId": "ac672d31-455c-447a-963e-bb121ebb88f5",
+          "jobName": "test3"
+        },
+        {
+          "jobId": "c985699e-13f4-440a-974c-924edbd240b4",
+          "jobName": "test3"
+        }
+      ],
+      "failedVaServerUnreachable": [
+        {
+          "jobId": "ac672d31-455c-447a-963e-bb121ebb88f5",
+          "jobName": "test3"
+        }
+      ]
+    }
+  }
