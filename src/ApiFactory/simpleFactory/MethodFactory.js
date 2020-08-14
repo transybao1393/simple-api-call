@@ -1,29 +1,19 @@
-import optionA from '../../responseType/optionA.json';
 import axios from 'axios';
 import https from 'https';
 import {notification} from 'antd';
 
 export default class MethodFactory {
-    constructor() {
-        const vaJobs = [
-            "90faca8c-2762-4ac9-82a6-fda9f5c277c0",
-            "06723b57-69c3-4c6a-9387-d1b6c1367f10",
-            "5b39b17c-099d-4d54-995e-64f4caffb64e"
-        ];
-    }
-
-    viewOptionAData() {
-        return optionA;
-    }
 
     openNotification(type, err) {
         notification[type]({
-            message: "Notification Title",
-            description: err.message   
+            message: "Error",
+            description: (err.response !== undefined && err.response.data !== undefined) ? err.response.data.message || err.response.data.errorMessage : err.message
         });
     };
 
+    //- GET, PUT, POST, DELETE request will go through here
     generalRequest(method, url, options = {}) {
+        //- axios request config
         const consumeOptions = Object.assign({
             url,
             method,
@@ -35,6 +25,7 @@ export default class MethodFactory {
         console.log('options when consume', consumeOptions);
         return axios(consumeOptions)
         .catch(err => {
+            console.log('error.response', err.response);
             this.openNotification('error', err);
             return;
         });

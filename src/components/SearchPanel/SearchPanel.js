@@ -20,7 +20,7 @@ class SearchPanel extends Component {
         return (
             <div className="SearchPanel">
                 <Row>
-                    <Col span={10}>
+                    {/* <Col span={10}>
                         <DropdownButton
                             dropdownList={this.state.statusList}
                             dropdownType={"STATUS"}
@@ -37,12 +37,11 @@ class SearchPanel extends Component {
                             dropdownList={this.state.sourceList}
                             dropdownType={"SOURCE"}
                         />
-                    </Col>
-                    <Col span={12}>
+                    </Col> */}
+                    <Col span={24}>
                         <SimpleInput 
                             placeholderValue={"Job search"}    
                         />
-                        <Button>Clear</Button>
                     </Col>
                 </Row>
             </div>

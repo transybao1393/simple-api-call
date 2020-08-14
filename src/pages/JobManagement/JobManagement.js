@@ -18,7 +18,7 @@ export default class JobManagement extends Component {
             <div className="jobMng">
                 <JobManagementContext.Provider value={initialJobState}>
                     <SearchPanel/>
-                    <JobList/>
+                    {/* <JobList/> */}
                 </JobManagementContext.Provider>
             </div>
         );
